@@ -96,6 +96,40 @@ body {
   }
 }
 
+h1 {
+  font-size: clamp(2rem, 4vw, 2.875rem);
+  line-height: 1.2;
+  color: hsl(210, 10%, 33%);
+}
+
+h2 {
+  color: hsl(210, 10%, 33%);
+  font-size: clamp(2rem, 3vw, 2.25rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.padding-b-05 {
+  padding-bottom: 0.5rem;
+}
+
+.padding-b-2 {
+  padding-bottom: 3rem;
+}
+
+.padding-b-8 {
+  padding-bottom: 8.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(210, 10%, 33%);
+  font-weight: 700;
+  opacity: 0.7;
+}
+
 button {
   border: none;
   border-radius: 100vw;
@@ -131,8 +165,13 @@ button {
   background-color: hsl(233, 100%, 75%);
 }
 
+.container {
+  --max-width: 65rem;
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
 .primary-header {
-  /* background-image: url("images/bg-header-desktop.png"); */
   padding-top: 8rem;
 }
 
@@ -143,58 +182,23 @@ button {
   align-items: center;
 }
 
-.container {
-  --max-width: 65rem;
-  width: min(100% - 2rem, var(--max-width));
-  margin-inline: auto;
+.primary-header > .container > p {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .header-logo {
   padding-bottom: 3rem;
 }
 
-h1 {
-  font-size: clamp(2rem, 4vw, 2.875rem);
-  line-height: 1.2;
-  color: hsl(210, 10%, 33%);
-}
-
-
-
-h2 {
-  color: hsl(210, 10%, 33%);
-  font-size: clamp(2rem, 3vw, 2.25rem);
-}
-
-.container p:not(.font-header) {
-  color: hsl(201, 11%, 66%);
-  font-size: 1rem;
-}
-
-.font-header {
+.font-paragraph {
   font-size: clamp(1rem, calc(0.88rem + 0.49vw), 1.25rem);
   color: hsl(201, 11%, 66%);
 }
 
-.primary-header > .container > p {
-  padding-top: 1.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.padding-b-05 {
-  padding-bottom: 0.5rem;
-}
-
-.padding-b-2 {
-  padding-bottom: 3rem;
-}
-
-.padding-b-large {
-  padding-bottom: 8.5rem;
-}
-
-h3 {
-  font-size: 1.5rem;
+.container p:not(.font-paragraph) {
+  color: hsl(201, 11%, 66%);
+  font-size: 1rem;
 }
 
 p:not(.no-padding) {
@@ -268,13 +272,6 @@ footer {
   background-color: hsl(0, 0%, 97%);
 }
 
-a {
-  text-decoration: none;
-  color: hsl(210, 10%, 33%);
-  font-weight: 700;
-  opacity: 0.7;
-}
-
 footer .container {
   display: grid;
   place-items: center;
@@ -319,4 +316,3 @@ footer .container a img {
     margin-bottom: 5rem;
   }
 }
-
